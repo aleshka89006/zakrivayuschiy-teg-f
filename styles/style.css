@@ -13,4 +13,309 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--bg-color, #fff);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--main-font, sans-serif);
+  font-variation-settings: "wght" var(--font-weight, 400);
+}
+
+.header {
+  background-color: var(--background-color, #fff);
+  inline-size: var(--page-width);
+  padding-block: clamp(7.5rem, 6.9231rem + 2.4615vw, 8rem);
+  border: var(--border, 2px solid #000);
+  margin: 100px 0;
+}
+
+.header__container {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+  font-family: var(--accent-font, sans-serif);
+  text-transform: uppercase;
+}
+
+.header__title {
+  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  line-height: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  text-decoration: none;
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+  line-height: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+}
+
+.main {
+  inline-size: var(--page-width);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 50px;
+}
+
+.card {
+  background-color: var(--bg-color, #fff);
+  border: var(--border, 2px solid #000);
+}
+
+.card_title {
+  font-size: var(--font-size-main, 18px);
+  font-variation-settings: "wght" var(--wght-title, 700);
+  line-height: 21.78px;
+  padding: 5px 10px 4px;
+}
+
+.card_decor {
+  position: relative;
+  border-block: var(--border, 2px solid #000);
+}
+
+.card_label {
+  position: absolute;
+  z-index: 1;
+  mix-blend-mode: hard-light;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font, sans-serif);
+  font-size: var(--font-size, 14px);
+  line-height: 14px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  text-shadow:
+  -1px 0 var(--text-shadow, #fff),
+  0 1px var(--text-shadow, #fff),
+  1px 0 var(--text-shadow, #fff),
+  0 -1px var(--text-shadow, #fff);
+}
+
+@supports ((text-stroke: 1px var(---text-shadow, #fff)) or (-webkit-text-stroke: 1px var(--text-shadow, #fff))) {
+  .card_labe {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-shadow, #fff);
+    text-stroke: 1px var(--text-shadow, #fff);
+  }
+}
+
+.card_image {
+  inline-size: 100%;
+  aspect-ratio: 1/1;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.filter-brightness {
+  filter: brightness(150%);
+}
+
+.filter-contrast {
+  filter: contrast(120%);
+}
+
+.filter-blur {
+  filter: blur(0.1rem);
+}
+
+.filter-opacity {
+  filter: opacity(0.5);
+}
+
+.filter-grayscale {
+  filter: grayscale(0.4);
+}
+
+.filter-sepia {
+  filter: sepia(60%);
+}
+
+.filter-hue-rotate-saturate {
+  filter: hue-rotate(-45deg) saturate(125%);
+}
+
+.card_text {
+  display: grid;
+  padding: 25px;
+  gap: 27px;
+}
+
+.text {
+  line-height: var(--line-height, 21px);
+  font-size: var(--font-size-main, 18px);
+}
+
+.card__button {
+  display: grid;
+  justify-content: end;
+  padding-inline-end: 25px;
+  padding-block-end: 25px;
+  grid-template-columns: repeat(2, auto);
+  gap: 5px;
+}
+
+.button {
+  position: relative;
+  background-color: var(--bg-color, #fff);
+  border: var(--border, 2px solid #000);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color, #000);
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.button:hover::before {
+  transform:  translateX(0);
+}
+
+.card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  block-size: 38px;
+  inline-size: 39px;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--border-color, #000);
+  outline-offset: -2px;
+  transition: border 0.3s ease;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.heart:hover .main-body {
+  fill: var(--accent-color, #000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.heart:active .main-body {
+  fill: var(--heart-color, #FF0000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.heart:hover .core {
+  fill: var(--accent-color, #000);
+  transition: fill 0.3s linear;
+}
+
+.heart:active .core {
+  fill: var(--heart-color, #FF0000);
+  transition: fill 0.3s linear;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.card__like-button {
+  block-size: 38px;
+  inline-size: 130px;
+}
+
+.button__text {
+  font-family: var(--accent-font, sans-serif);
+  font-size: var(--font-size, 14px);
+  line-height: 12.6px;
+  mix-blend-mode: difference;
+  color: var(--text-color-button, #fff);
+}
+
+.save-button {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  gap: 8px;
+  padding:18px 21px;
+  margin-block-end: 103px;
+}
+
+.floppy {
+  mix-blend-mode: difference;
+  inline-size: 21px;
+  block-size: 21px;
+  fill: var(--fill-color, #fff);
+}
+
+.dialog[open] {
+  inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+}
+
+dialog::backdrop {
+  background-color: rgba(0 0 0 / 0.75);
+}
+
+.floppy-dialog {
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.text-dialog {
+  text-transform: uppercase;
+  font-family: var(--accent-font, sans-serif);
+  font-size: var(--font-size, 14px);
+  line-height: var(--line-height, 21px);
+}
+
+.button-dialog{
+  grid-column: 1/3;
+  inline-size: 100%;
+  block-size: 38px;
+}
+
+@media (width <= 375px) {
+  .save-button {
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .floppy {
+    inline-size: 28px;
+    block-size: 28px;
+  }
 }
