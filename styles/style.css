@@ -271,7 +271,7 @@ dialog::backdrop {
   grid-column: 1/3;
   inline-size: 100%;
   block-size: 38px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 
 @media (width <= 375px) {
