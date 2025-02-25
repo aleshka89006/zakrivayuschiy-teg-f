@@ -69,7 +69,7 @@
 .card_title {
   font-size: var(--font-size-main, 18px);
   font-variation-settings: "wght" var(--wght-title, 700);
-  line-height: 1,3125rem;
+  line-height: 21.78px;
   padding: 5px 10px 4px;
 }
 
@@ -86,7 +86,7 @@
   right: 25px;
   font-family: var(--accent-font, fantasy);
   font-size: var(--font-size, 14px);
-  line-height: 0,875rem;
+  line-height: 14px;
   text-transform: uppercase;
   opacity: 0.5;
   text-shadow:
@@ -147,7 +147,7 @@
 }
 
 .text {
-  line-height: var(--line-height, 1,3125rem);
+  line-height: var(--line-height, 21px);
   font-size: var(--font-size-main, 18px);
 }
 
@@ -221,7 +221,7 @@
 .button__text {
   font-family: var(--accent-font, fantasy);
   font-size: var(--font-size, 14px);
-  line-height: 0,75rem;
+  line-height: 12.6px;
   mix-blend-mode: difference;
   color: var(--text-color-button, #fff);
 }
@@ -264,7 +264,7 @@ dialog::backdrop {
   text-transform: uppercase;
   font-family: var(--accent-font, fantasy);
   font-size: var(--font-size, 14px);
-  line-height: var(--line-height, 1,3125rem);
+  line-height: var(--line-height, 21px);
 }
 
 .button-dialog {

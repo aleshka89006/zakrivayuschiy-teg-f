@@ -7,7 +7,7 @@
     --font-size: 14px;
     --font-weight: 400;
     --font-weight-title: 700;
-    --line-height: 1,3125rem;
+    --line-height: 21px;
     --page-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
     --border: 2px solid #000;
     --bg-color: #fff;
