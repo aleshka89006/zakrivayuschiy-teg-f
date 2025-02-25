@@ -17,41 +17,75 @@
     }
   }
   
-  @keyframes sparks {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+@keyframes sparks {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
 
 .like-icon.is-liked .core {
-    fill: var(--heart-color, #FF0000);
-    transition: fill 0.3s linear;
-  }
+  fill: var(--heart-color, #FF0000);
+  transition: fill 0.3s linear;
+}
 
-  .like-icon.is-liked .contour {
-    fill: var(--heart-color, #FF0000);
-    transition: fill 0.3s linear 0.06s;
-  }
+.like-icon.is-liked .contour {
+  fill: var(--heart-color, #FF0000);
+  transition: fill 0.3s linear 0.06s;
+}
   
-  .like-icon.is-liked .main-body {
-    fill: var(--heart-color, #FF0000);
-    transition: fill 0.3s linear 0.05s;
-  }
+.like-icon.is-liked .main-body {
+  fill: var(--heart-color, #FF0000);
+  transition: fill 0.3s linear 0.05s;
+}
   
-  .like-icon.is-liked .sparks {
-    animation: sparks 0.3s ease-in 0.3s alternate;
-  }
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.3s alternate;
+}
 
-  .like-icon .contour {
-    fill: var(--heart-border, #000);
-    transition: fill 0.1s linear;
-  }
+.like-icon .contour {
+  fill: var(--heart-border, #000);
+  transition: fill 0.1s linear;
+}
   
-  .like-icon.is-liked .heart {
-    animation: scale 0.3s ease-in 0.1s alternate;
-    transform-origin: center;
-  }
+.like-icon.is-liked .heart {
+  animation: scale 0.3s ease-in 0.1s alternate;
+  transform-origin: center;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.heart:hover .main-body {
+  fill: var(--accent-color, #000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.heart:active .main-body {
+  fill: var(--heart-color, #FF0000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.heart:hover .core {
+  fill: var(--accent-color, #000);
+  transition: fill 0.3s linear;
+}
+
+.heart:active .core {
+  fill: var(--heart-color, #FF0000);
+  transition: fill 0.3s linear;
+}
+
+.sparks {
+  opacity: 0;
+}
   
